@@ -1,4 +1,4 @@
-# GAK-Sprayer
+# Google API Key Sprayer
 
 Simple Google APIs token checker.
 
@@ -22,10 +22,12 @@ Run:
 python3 gak-sprayer.py
 ```
 ### Docker
-To-do.
-
+#### Build and run:
+```
+docker build -t gak-sprayer .
+docker run --rm -v $(pwd):/home/gak/ -i docker.io/library/gak-sprayer
+```
 ## Current APIs support:
-
 - [x] [Safe Browsing API](https://developers.google.com/safe-browsing/v4)
 - [x] [FCM API](https://firebase.google.com/docs/reference/fcm/rest)
 - [x] [Books API](https://developers.google.com/books) [Using the API](https://developers.google.com/books/docs/v1/using)

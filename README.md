@@ -5,7 +5,7 @@ Simple Google APIs token checker.
 Used to determine whether or not a leaked/found Google API key is vulnerable to unauthorized access by other applications.
 
 ## Note
-Most of Bug-bounty platformplatforms mark this type of vulnerability as informational/low impact. If you're passing this off as a bug, double-check the find and impact.
+Most of Bug-bounty platforms mark this type of vulnerability as informational/low impact. If you're passing this off as a bug, double-check the find and impact.
 
 ## Usage
 ### Local

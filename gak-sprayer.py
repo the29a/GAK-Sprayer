@@ -145,15 +145,13 @@ else:
 # Maps Embed API https://developers.google.com/maps/documentation/embed/get-started
 url = "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJzVO_VEcfLIgRkB4jxyh7AwU&key=" + apikey
 response = requests.get(url, verify=False)
-if response.text.find("The Google Maps Embed API must be used in an iframe.") != -1:
+if response.status_code == 200:
 	print("- [+] Maps Embed API - API key is valid. PoC link to use directly in browser:")
 	print("- [+]", url, "\n")
-elif response.text.find("Google Maps Platform rejected your request") != -1 :
-	print("- [-] Maps Embed API has not been used in project before or it is disabled")
-	print("- [-] Reason:", response.text, "\n")
 else:
 	print("- [-] Maps Embed API has not been used in project before or it is disabled")
-	print("- [-] Reason:", response.text, "\n")
+	print("- [-] Reason:", "Status code", response.status_code, "\n")
+
 
 # Nearby Search API https://developers.google.com/maps/documentation/places/web-service/search-nearby
 url = "https://places.googleapis.com/v1/places/ChIJj61dQgK6j4AR4GeTYWZsKWw?fields=id,displayName&key=" + apikey

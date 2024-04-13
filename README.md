@@ -19,13 +19,13 @@ gh repo clone the29a/GAK-Sprayer
 ```
 Run:
 ```
-python3 gak-sprayer.py
+python3 gak-sprayer.py --api-key AIzaSyCxr...Rb-PzMOV8U4n2q...6e4
 ```
 ### Docker
 #### Build and run:
 ```
 docker build -t gak-sprayer .
-docker run --rm -v $(pwd):/home/gak/ -i docker.io/library/gak-sprayer
+docker run --rm -v $(pwd):/home/gak/ -i docker.io/library/gak-sprayer --api-key AIzaSyCxr...Rb-PzMOV8U4n2q...6e4
 ```
 ## Current APIs support:
 - [x] [Safe Browsing API](https://developers.google.com/safe-browsing/v4)
@@ -52,9 +52,9 @@ docker run --rm -v $(pwd):/home/gak/ -i docker.io/library/gak-sprayer
 - [x] [Timezone API](https://developers.google.com/maps/documentation/timezone/overview)
 
 Non-actual:  
-- [?] [Maps Embed Advanced API](https://developers.google.com/maps/documentation/embed/get-started)
-- [?] [Maps Static API](https://developers.google.com/maps/documentation/maps-static/overview) (embed static maps)
-- [?] [Playable Locations API](https://developers.google.com/maps/documentation/gaming/overview_locations) deprecated as of October 18, 2021
+~~- [?] [Maps Embed Advanced API](https://developers.google.com/maps/documentation/embed/get-started)~~  
+~~- [?] [Maps Static API](https://developers.google.com/maps/documentation/maps-static/overview) (embed static maps)~~  
+~~- [?] [Playable Locations API](https://developers.google.com/maps/documentation/gaming/overview_locations) deprecated as of October 18, 2021~~  
 
 ---
 Google API:  
